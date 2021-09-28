@@ -1,5 +1,5 @@
-import { Flex, Text, Input, Icon } from "@chakra-ui/react"
-import { RiSearchLine } from "react-icons/ri"
+import { Flex, Text, Input, Icon, HStack, Box, Avatar } from "@chakra-ui/react"
+import { RiNotificationLine, RiSearchLine, RiUserAddLine } from "react-icons/ri"
 
 export function Header() {
   return (
@@ -48,6 +48,35 @@ export function Header() {
         />
 
         <Icon as={RiSearchLine} fontSize="20" />
+      </Flex>
+          
+      <Flex
+        align="center"
+        marginLeft="auto"
+      >
+        <HStack 
+          spacing="8" 
+          marginX="8" 
+          paddingRight="8" 
+          paddingY="1" 
+          color="gray.300" 
+          borderRightWidth={1}
+          borderColor="gray.700"
+        > 
+          <Icon as={RiNotificationLine} fontSize="20" />
+          <Icon as={RiUserAddLine} fontSize="20" />
+        </HStack>
+      
+        <Flex align="center">
+          <Box marginRight="4" textAlign="right">
+            <Text>william</Text>
+            <Text color="gray.300" fontSize="small">
+              will.ribeiro@live.com
+            </Text>
+          </Box>
+
+          <Avatar size="md" name="William" src="https://github.com/willnogueyra.png"/>
+        </Flex>
       </Flex>
     </Flex>
   );
