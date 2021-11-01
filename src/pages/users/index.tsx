@@ -14,9 +14,7 @@ import { GetServerSideProps } from "next";
 export default function UserList({ users }) {
   const [page, setPage] = useState(1)
 
-  const { data, isLoading, isFetching, error } = useUsers(page, {
-    initialData: users,
-  });
+  const { data, isLoading, isFetching, error } = useUsers(page);
 
 
   const isWideVersion = useBreakpointValue({
