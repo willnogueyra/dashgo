@@ -47,7 +47,6 @@ export function makeServer() {
 
         const users = this.serialize(schema.all('user'))
           .users
-          .sort((a, b) => a.created_at - b.created_at)
           .slice(pageStart, pageEnd)
 
         return new Response( 
